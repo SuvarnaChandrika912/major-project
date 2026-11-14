@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #eef3fb;
+  --color-navy-100: #d9e3f5;
+  --color-navy-200: #b3c6ea;
+  --color-navy-300: #84a2da;
+  --color-navy-400: #5479c3;
+  --color-navy-500: #335aa8;
+  --color-navy-600: #23458a;
+  --color-navy-700: #1a356d;
+  --color-navy-800: #132a57;
+  --color-navy-900: #0b2559;
+  --color-navy-950: #071a40;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Markdown answers rendered by react-markdown */
+.prose-answer {
+  @apply text-[15px] leading-7 text-slate-700;
+}
+.prose-answer h1,
+.prose-answer h2,
+.prose-answer h3 {
+  @apply mt-4 mb-2 font-semibold text-navy-900;
+}
+.prose-answer h1 { @apply text-lg; }
+.prose-answer h2 { @apply text-base; }
+.prose-answer h3 { @apply text-[15px]; }
+.prose-answer p { @apply my-2; }
+.prose-answer ul { @apply my-2 list-disc pl-5; }
+.prose-answer ol { @apply my-2 list-decimal pl-5; }
+.prose-answer li { @apply my-1; }
+.prose-answer a { @apply text-navy-600 underline underline-offset-2; }
+.prose-answer strong { @apply font-semibold text-slate-900; }
+.prose-answer code { @apply rounded bg-slate-100 px-1 py-0.5 text-[13px]; }
+.prose-answer table { @apply my-3 w-full border-collapse text-sm; }
+.prose-answer th { @apply border border-slate-200 bg-slate-50 px-2 py-1 text-left font-medium; }
+.prose-answer td { @apply border border-slate-200 px-2 py-1 align-top; }
+.prose-answer blockquote { @apply border-l-4 border-navy-200 pl-3 text-slate-600; }
+
+.citation-marker {
+  @apply mx-0.5 inline-flex h-[18px] min-w-[18px] cursor-pointer items-center justify-center rounded bg-navy-50 px-1 align-text-top text-[11px] font-semibold text-navy-700 hover:bg-navy-100;
+}
